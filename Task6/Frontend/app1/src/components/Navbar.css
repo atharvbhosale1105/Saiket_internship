@@ -1,0 +1,147 @@
+/* ================= ROOT ================= */
+.simple-nav {
+  background: linear-gradient(135deg, #4361ee, #7209b7);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* NAVBAR ENTRY ANIMATION */
+.animate-nav {
+  animation: slideDown 0.6s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= CONTAINER ================= */
+.nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+/* ================= LOGO ================= */
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo span {
+  color: #ffd166;
+}
+
+.nav-logo:hover {
+  transform: scale(1.08);
+}
+
+/* ================= NAV ITEMS ================= */
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+/* LINKS */
+.nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 6px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #ffd166;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.nav-link:hover::after {
+  width: 70%;
+}
+
+/* ================= LOGOUT BUTTON ================= */
+.logout-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(239, 68, 68, 0.4);
+}
+
+.logout-btn:active {
+  transform: scale(0.95);
+}
+
+/* ================= SPACER ================= */
+.nav-space {
+  height: 64px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .nav-content {
+    flex-direction: column;
+    height: auto;
+    padding: 16px 0;
+    gap: 12px;
+  }
+
+  .nav-items {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .nav-link,
+  .logout-btn {
+    width: 90%;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .nav-space {
+    height: 120px;
+  }
+}

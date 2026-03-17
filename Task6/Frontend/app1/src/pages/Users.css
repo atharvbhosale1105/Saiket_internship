@@ -1,0 +1,142 @@
+/* ===========================
+   USERS PAGE STYLES
+=========================== */
+
+.container {
+  max-width: 1200px;
+}
+
+/* Page Title */
+h3 {
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* Table Wrapper */
+.table {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* Table Header */
+.table thead th {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Table Body */
+.table tbody tr {
+  transition: all 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: #f9fafb;
+  transform: scale(1.005);
+}
+
+/* Table Cells */
+.table td {
+  text-align: center;
+  vertical-align: middle;
+  color: #374151;
+  font-size: 0.95rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Bio Column */
+.table td:nth-child(5) {
+  max-width: 220px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Status Badges */
+.badge {
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+.badge.bg-success {
+  background-color: #22c55e !important;
+}
+
+.badge.bg-danger {
+  background-color: #ef4444 !important;
+}
+
+/* Action Buttons */
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  border-radius: 6px;
+}
+
+.btn-primary {
+  background-color: #4f46e5;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #4338ca;
+}
+
+.btn-danger {
+  background-color: #ef4444;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #dc2626;
+}
+
+/* Empty State */
+.table tbody tr td[colspan] {
+  font-size: 1rem;
+  color: #6b7280;
+  padding: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .table thead {
+    display: none;
+  }
+
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+    width: 100%;
+  }
+
+  .table tr {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+  }
+
+  .table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    font-weight: 600;
+    color: #6b7280;
+  }
+}

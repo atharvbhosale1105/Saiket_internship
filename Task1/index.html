@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
+
+  <nav class="fixed w-full bg-black/50 backdrop-blur z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    
+    <h1 class="text-2xl font-bold text-cyan-400">MyPortfolio</h1>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex space-x-6">
+      <li><a href="#home" class="hover:text-cyan-400 transition">Home</a></li>
+      <li><a href="#projects" class="hover:text-cyan-400 transition">Projects</a></li>
+      <li><a href="#contact" class="hover:text-cyan-400 transition">Contact</a></li>
+    </ul>
+
+    <!-- Mobile Menu Button -->
+    <button id="menuBtn" class="md:hidden text-white text-2xl">
+      ☰
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-black/80 px-6 pb-4">
+    <a href="#home" class="block py-2 hover:text-cyan-400">Home</a>
+    <a href="#projects" class="block py-2 hover:text-cyan-400">Projects</a>
+    <a href="#contact" class="block py-2 hover:text-cyan-400">Contact</a>
+  </div>
+</nav>
+
+
+  <!-- Home Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center text-center px-6">
+    <div class="animate-fadeIn">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4">
+           Hi, I'm <span class="text-cyan-400">Atharv</span>
+      </h2>
+
+       <p class="text-gray-300 text-base md:text-lg max-w-xl mx-auto mb-6">
+        A passionate developer building modern web applications with clean UI and powerful logic.
+      </p>
+      <a href="#projects"
+         class="inline-block px-8 py-3 rounded-full bg-cyan-500 hover:bg-cyan-600 transition transform hover:scale-105 shadow-lg">
+        View Projects
+      </a>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-black/40">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 text-cyan-400">Projects</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Project Card -->
+        <div class="bg-gray-800 rounded-xl p-6 hover:scale-105 transition transform shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Student Recruitment System</h3>
+          <p class="text-gray-400 mb-4">
+            The Student Recruitment System is a web-based application designed to streamline the process of student assessment and recruitment. 
+            The system allows students to register, create and update their profiles, and participate in multiple evaluation stages such as Test 1, Test 2, and interviews. 
+            Progression to the next stage depends on performance in the previous stage.
+          </p>
+          <button class="text-cyan-400 hover:underline">View Details</button>
+        </div>
+
+        <div class="bg-gray-800 rounded-xl p-6 hover:scale-105 transition transform shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Samrt Campus Complaint Management and Booking System</h3>
+          <p class="text-gray-400 mb-4">
+            The Smart Campus Complaint Management and Booking System is a centralized platform developed to enhance campus facility management. 
+            It allows students and staff to register complaints related to campus infrastructure such as classrooms, hostels, electrical issues, or sanitation,
+            and track their resolution status in real time.
+          </p>
+          <button class="text-cyan-400 hover:underline">View Details</button>
+        </div>
+
+        <div class="bg-gray-800 rounded-xl p-6 hover:scale-105 transition transform shadow-lg">
+          <h3 class="text-xl font-semibold mb-2">Crop Monitoring System</h3>
+          <p class="text-gray-400 mb-4">
+            The Crop Monitoring System is a technology-driven solution designed to assist farmers and agricultural organizations in monitoring crop health and environmental conditions. 
+            The system collects data such as soil moisture, temperature, humidity, and crop growth status using sensors or manual inputs.
+          </p>
+          <button class="text-cyan-400 hover:underline">View Details</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20">
+    <div class="max-w-xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-8 text-cyan-400">Contact Me</h2>
+
+      <form id="contactForm" class="bg-gray-800 p-8 rounded-xl shadow-lg space-y-4">
+        <div>
+          <label class="block mb-1">Name</label>
+          <input type="text" id="name"
+                 class="w-full px-4 py-2 rounded bg-gray-900 border border-gray-700 focus:outline-none focus:border-cyan-400">
+          <p id="nameError" class="text-red-400 text-sm hidden">Name is required</p>
+        </div>
+
+        <div>
+          <label class="block mb-1">Email</label>
+          <input type="email" id="email"
+                 class="w-full px-4 py-2 rounded bg-gray-900 border border-gray-700 focus:outline-none focus:border-cyan-400">
+          <p id="emailError" class="text-red-400 text-sm hidden">Enter a valid email</p>
+        </div>
+
+        <div>
+          <label class="block mb-1">Message</label>
+          <textarea id="message" rows="4"
+                    class="w-full px-4 py-2 rounded bg-gray-900 border border-gray-700 focus:outline-none focus:border-cyan-400"></textarea>
+          <p id="messageError" class="text-red-400 text-sm hidden">Message cannot be empty</p>
+        </div>
+
+        <button type="submit"
+                class="w-full bg-cyan-500 hover:bg-cyan-600 transition py-3 rounded font-semibold">
+          Send Message
+        </button>
+
+        <p id="successMsg" class="text-green-400 text-center hidden">
+          Message sent successfully!
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 bg-black/60">
+    <p class="text-gray-400">© 2026 Harish | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+<!-- Navbar -->
+<nav class="bg-white shadow-md fixed w-full z-10">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-indigo-600">OnlineMart</h1>
+
+    <button id="menuBtn" class="md:hidden text-2xl">☰</button>
+
+    <ul class="hidden md:flex space-x-6 font-medium">
+      <li><a href="#" class="hover:text-indigo-600">Home</a></li>
+      <li><a href="#products" class="hover:text-indigo-600">Products</a></li>
+      <li><a href="#newsletter" class="hover:text-indigo-600">Newsletter</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="pt-28 pb-20 bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4">
+      Upgrade Your Shopping Experience
+    </h2>
+    <p class="text-lg mb-6">Trendy products at unbeatable prices.</p>
+    <a href="#products"
+       class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+      Shop Now
+    </a>
+  </div>
+</section>
+
+<!-- Products Section -->
+<section id="products" class="py-16">
+  <div class="max-w-7xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center mb-10">Featured Products</h3>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+      <!-- Product Card -->
+      <div class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+
+        <!-- Image Container -->
+        <div class="w-full h-56 bg-gray-100 flex items-center justify-center">
+          <img src="./images/headphone.webp"
+               alt="Wireless Headphones"
+               class="max-h-full max-w-full object-contain transition-transform duration-300 hover:scale-105">
+        </div>
+
+        <div class="p-5">
+          <h4 class="text-xl font-semibold">Wireless Headphones</h4>
+          <p class="text-gray-600 mt-2">₹2,999</p>
+          <button class="mt-4 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Card -->
+      <div class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+
+        <div class="w-full h-56 bg-gray-100 flex items-center justify-center">
+          <img src="./images/watch.jpg"
+               alt="Smart Watch"
+               class="max-h-full max-w-full object-contain transition-transform duration-300 hover:scale-105">
+        </div>
+
+        <div class="p-5">
+          <h4 class="text-xl font-semibold">Smart Watch</h4>
+          <p class="text-gray-600 mt-2">₹4,499</p>
+          <button class="mt-4 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Card -->
+      <div class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+
+        <div class="w-full h-56 bg-gray-100 flex items-center justify-center">
+          <img src="./images/shoe.jpg"
+               alt="Running Shoes"
+               class="max-h-full max-w-full object-contain transition-transform duration-300 hover:scale-105">
+        </div>
+
+        <div class="p-5">
+          <h4 class="text-xl font-semibold">Running Shoes</h4>
+          <p class="text-gray-600 mt-2">₹3,299</p>
+          <button class="mt-4 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section id="newsletter" class="bg-gray-100 py-16">
+  <div class="max-w-md mx-auto text-center px-6">
+    <h3 class="text-3xl font-bold mb-4">Join Our Newsletter</h3>
+    <p class="mb-6 text-gray-600">Get updates on offers & new arrivals</p>
+
+    <form class="space-y-4">
+      <input type="email"
+             placeholder="Enter your email"
+             class="w-full p-3 rounded border focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      <button class="w-full bg-indigo-600 text-white py-3 rounded hover:bg-indigo-700 transition">
+        Subscribe
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-indigo-600 text-white text-center py-4">
+  © 2026 OnlineMart. All rights reserved.
+</footer>
+
+</body>
+</html>
